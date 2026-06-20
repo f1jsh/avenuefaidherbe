@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2017 - Repas de quartier</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+nav {
+    background: #34495e;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.info {
+    text-align: center;
+    margin: 20px;
+    color: #555;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 12px;
+    padding: 20px;
+}
+
+.grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.25);
+    cursor: pointer;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.92);
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox img {
+    max-width: 92%;
+    max-height: 88%;
+    border-radius: 8px;
+}
+
+.close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 42px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.prev, .next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 42px;
+    background: rgba(255,255,255,.25);
+    color: white;
+    border: none;
+    padding: 14px 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    z-index: 20;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.back {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 14px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .grid img {
+        height: 120px;
+    }
+
+    .prev, .next {
+        font-size: 30px;
+        padding: 10px 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>2017 - Repas de quartier</h1>
+</header>
+
+<nav>
+<a href="index.html">Accueil</a>
+<a href="archives.html">Archives</a>
+</nav>
+
+<a class="back" href="archives.html">← Retour aux archives</a>
+
+<div class="info">72 photos</div>
+
+<div class="grid">
+<img src="photos/2017/repas/2017-repas-0001.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0002.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0003.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0004.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0005.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0006.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0007.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0008.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0009.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0010.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0011.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0012.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0013.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0014.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0015.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0016.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0017.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0018.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0019.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0020.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0021.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0022.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0023.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0024.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0025.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0026.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0027.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0028.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0029.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0030.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0031.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0032.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0033.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0034.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0035.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0036.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0037.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0038.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0039.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0040.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0041.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0042.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0043.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0044.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0045.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0046.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0047.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0048.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0049.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0050.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0051.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0052.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0053.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0054.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0055.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0056.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0057.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0058.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0059.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0060.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0061.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0062.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0063.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0064.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0065.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0066.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0067.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0068.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0069.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0070.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0071.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2017/repas/2017-repas-0072.jpg" onclick="openImg(this.src)" alt="">
+
+</div>
+
+<div class="lightbox" id="lightbox">
+<span class="close" onclick="closeImg()">&times;</span>
+<button class="prev" onclick="prevImg()">&#10094;</button>
+<img id="bigimg">
+<button class="next" onclick="nextImg()">&#10095;</button>
+</div>
+
+<footer>Association Avenue Faidherbe</footer>
+
+<script>
+let photos = [];
+let current = 0;
+
+document.addEventListener("DOMContentLoaded", function(){
+    photos = Array.from(document.querySelectorAll(".grid img")).map(img => img.src);
+});
+
+function openImg(src){
+    current = photos.indexOf(src);
+    document.getElementById("bigimg").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeImg(){
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function prevImg(){
+    current = (current - 1 + photos.length) % photos.length;
+    document.getElementById("bigimg").src = photos[current];
+}
+
+function nextImg(){
+    current = (current + 1) % photos.length;
+    document.getElementById("bigimg").src = photos[current];
+}
+
+document.addEventListener("keydown", function(e){
+    if(document.getElementById("lightbox").style.display !== "flex") return;
+    if(e.key === "Escape") closeImg();
+    if(e.key === "ArrowLeft") prevImg();
+    if(e.key === "ArrowRight") nextImg();
+});
+</script>
+
+</body>
+</html>

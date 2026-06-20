@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2025 - Marche</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+nav {
+    background: #34495e;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.info {
+    text-align: center;
+    margin: 20px;
+    color: #555;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 12px;
+    padding: 20px;
+}
+
+.grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.25);
+    cursor: pointer;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.92);
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox img {
+    max-width: 92%;
+    max-height: 88%;
+    border-radius: 8px;
+}
+
+.close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 42px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.prev, .next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 42px;
+    background: rgba(255,255,255,.25);
+    color: white;
+    border: none;
+    padding: 14px 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    z-index: 20;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.back {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 14px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .grid img {
+        height: 120px;
+    }
+
+    .prev, .next {
+        font-size: 30px;
+        padding: 10px 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>2025 - Marche</h1>
+</header>
+
+<nav>
+<a href="index.html">Accueil</a>
+<a href="archives.html">Archives</a>
+</nav>
+
+<a class="back" href="archives.html">← Retour aux archives</a>
+
+<div class="info">94 photos</div>
+
+<div class="grid">
+<img src="photos/2025/marche/2025-Marche-0001.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0002.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0003.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0004.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0005.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0006.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0007.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0008.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0009.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0010.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0011.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0012.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0013.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0014.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0015.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0016.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0017.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0018.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0019.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0020.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0021.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0022.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0023.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0024.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0025.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0026.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0027.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0028.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0029.jpg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0030.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0031.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0032.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0033.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0034.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0035.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0036.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0037.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0038.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0039.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0040.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0041.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0042.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0043.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0044.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0045.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0046.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0047.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0048.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0049.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0050.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0051.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0052.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0053.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0054.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0055.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0056.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0057.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0058.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0059.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0060.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0061.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0062.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0063.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0064.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0065.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0066.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0067.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0068.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0069.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0070.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0071.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0072.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0073.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0074.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0075.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0076.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0077.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0078.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0079.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0080.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0081.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0082.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0083.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0084.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0085.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0086.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0087.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0088.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0089.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0090.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0091.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0092.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0093.jpeg" onclick="openImg(this.src)" alt="">
+<img src="photos/2025/marche/2025-Marche-0094.jpeg" onclick="openImg(this.src)" alt="">
+
+</div>
+
+<div class="lightbox" id="lightbox">
+<span class="close" onclick="closeImg()">&times;</span>
+<button class="prev" onclick="prevImg()">&#10094;</button>
+<img id="bigimg">
+<button class="next" onclick="nextImg()">&#10095;</button>
+</div>
+
+<footer>Association Avenue Faidherbe</footer>
+
+<script>
+let photos = [];
+let current = 0;
+
+document.addEventListener("DOMContentLoaded", function(){
+    photos = Array.from(document.querySelectorAll(".grid img")).map(img => img.src);
+});
+
+function openImg(src){
+    current = photos.indexOf(src);
+    document.getElementById("bigimg").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeImg(){
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function prevImg(){
+    current = (current - 1 + photos.length) % photos.length;
+    document.getElementById("bigimg").src = photos[current];
+}
+
+function nextImg(){
+    current = (current + 1) % photos.length;
+    document.getElementById("bigimg").src = photos[current];
+}
+
+document.addEventListener("keydown", function(e){
+    if(document.getElementById("lightbox").style.display !== "flex") return;
+    if(e.key === "Escape") closeImg();
+    if(e.key === "ArrowLeft") prevImg();
+    if(e.key === "ArrowRight") nextImg();
+});
+</script>
+
+</body>
+</html>
