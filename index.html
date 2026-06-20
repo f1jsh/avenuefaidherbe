@@ -15,24 +15,34 @@ body{
     background:#f5f5f5;
 }
 
-header{
-    background:#2c3e50;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+.hero{
+    position:relative;
 }
 
-header h1{
+.hero img{
+    width:100%;
+    display:block;
+}
+
+.overlay{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(0,0,0,0.55);
+    color:white;
+    padding:20px 40px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.overlay h1{
     margin:0;
     font-size:3em;
 }
 
-header p{
-    font-size:1.2em;
-}
-
 nav{
-    background:#34495e;
+    background:#2c3e50;
     text-align:center;
     padding:15px;
 }
@@ -52,8 +62,8 @@ nav a{
 
 .card{
     background:white;
-    border-radius:10px;
     padding:25px;
+    border-radius:10px;
     margin-top:20px;
     box-shadow:0 2px 8px rgba(0,0,0,0.15);
 }
@@ -65,15 +75,18 @@ footer{
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
+<div class="hero">
+<img src="images/Accueil-2025.jpeg" alt="Repas de quartier 2025">
+
+<div class="overlay">
 <h1>Association Avenue Faidherbe</h1>
-<p>Repas de quartier • Marches • Halloween • Carnaval</p>
-</header>
+<p>Depuis 2004</p>
+</div>
+</div>
 
 <nav>
 <a href="#">Accueil</a>
@@ -88,23 +101,14 @@ footer{
 <h2>Bienvenue</h2>
 
 <p>
-Depuis 2004, les habitants de l'Avenue Faidherbe organisent
-des repas de quartier, des marches conviviales,
-des animations d'Halloween et diverses manifestations.
+Depuis plus de vingt ans, les habitants de l'Avenue Faidherbe
+organisent des repas de quartier, des marches conviviales,
+Halloween et diverses animations.
 </p>
 
 <p>
-Le site historique est actuellement en cours de reconstruction.
+Le site est actuellement en cours de reconstruction.
 Les archives photographiques sont en cours d'intégration.
-</p>
-
-</div>
-
-<div class="card">
-<h2>Archives</h2>
-
-<p>
-Plus de 20 années d'activités et plusieurs milliers de photos seront prochainement disponibles.
 </p>
 
 </div>
