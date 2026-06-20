@@ -1,1 +1,35 @@
+media:
+  input: photos
+  output: /photos
 
+content:
+  - name: accueil
+    label: Accueil
+    type: file
+    path: index.html
+
+  - name: archives
+    label: Archives
+    type: file
+    path: archives.html
+
+  - name: photos
+    label: Photos
+    type: collection
+    path: photos
+    filename: "{year}-{event}-{index}.jpeg"
+    fields:
+      - name: year
+        label: Année
+        type: string
+      - name: event
+        label: Événement
+        type: select
+        options:
+          - repas
+          - marche
+          - halloween
+          - carnaval
+      - name: image
+        label: Photo
+        type: image
